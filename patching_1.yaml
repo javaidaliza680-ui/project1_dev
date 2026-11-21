@@ -1,1 +1,16 @@
-# This playbook is going to patch all servers 
+# This playbook is going to patch all servers
+
+---
+- name: patch
+  hosts: Aliza
+  gather_facts: no
+
+  tasks:
+    - name: patching server
+      dnf:
+        name: "*"
+        state: lastest
+
+
+
+          # This code is edited by Fawad
